@@ -8,21 +8,7 @@ opts = Options()
 browser = Firefox(options=opts)
 browser.get('https://dhowberbackend.qburst.build/admin')
 
-# login_form = browser.find_element_by_id('login-form')
-# username_field = login_form.find_element_by_id("id_username")
-# password_field = login_form.find_element_by_id("id_password")
 
-# username_field.send_keys("+971-1234567890")
-# password_field.send_keys("qburst123")
-# login_form.submit()
-
-
-
-# print(browser)
-# print(dir(browser))
-
-# print(browser.current_url)
-# print("*****************************")
 login_form = LoginForm(browser)
 login_form.login("+971-1234567890", "qburst123")
 
